@@ -31,7 +31,7 @@ class LoadJsonToDataFrame:
     def load_json(self):
         dataframe = pd.read_json(self.file)
               
-        print(dataframe.head())
+        # print(dataframe.head())
         return dataframe
     
 

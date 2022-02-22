@@ -32,6 +32,7 @@ if __name__ == '__main__':
                 b.drop_duplicates()
                 b.calculate_bmi()
                 b.calculate_category()
+                print(b.get_data())
                 
                 print("\n Solution 2: total number of overweight people \n", b.get_overweight_count())
                 
