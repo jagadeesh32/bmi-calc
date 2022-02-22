@@ -1,0 +1,31 @@
+name: BMi Calculator Example
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+
+jobs:
+  tests:
+    name: "Python 3.7"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/checkout@v2"
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "${{ matrix.python-version }}"
+      - name: "Install dependencies"
+        run: |
+          python -VV
+          python -m site
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: "Run Sample Test of BMI Calculator"
+        run: "python main.py -i test.json"
+
+
+    
